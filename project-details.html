@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project Details - Muhammed Afid</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="bg-gray-900 text-white font-inter">
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 w-full bg-gray-900 bg-opacity-95 z-50 shadow-lg"
+        >
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <a href="index.html" class="text-xl font-bold"
+                        >Muhammed Afid</a
+                    >
+                    <a
+                        href="index.html"
+                        class="text-gray-300 hover:text-white transition-colors"
+                    >
+                        ← Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Project Details Section -->
+        <main class="pt-24 pb-16">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Project Header -->
+                    <header class="mb-12">
+                        <h1 class="text-4xl font-bold mb-4" id="projectTitle">
+                            Project Title
+                        </h1>
+                        <p
+                            class="text-xl text-gray-300 mb-6"
+                            id="projectDescription"
+                        >
+                            Project description will be loaded here
+                        </p>
+                    </header>
+
+                    <!-- Project Info Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <!-- Technologies Used -->
+                        <div class="bg-gray-800 rounded-lg p-6">
+                            <h2 class="text-2xl font-semibold mb-4">
+                                Framework & Technologies
+                            </h2>
+                            <ul class="space-y-2" id="technologies">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
+                        </div>
+
+                        <!-- State Management -->
+                        <div class="bg-gray-800 rounded-lg p-6">
+                            <h2 class="text-2xl font-semibold mb-4">
+                                State Management
+                            </h2>
+                            <ul class="space-y-2" id="stateManagement">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
+                        </div>
+
+                        <!-- Backend -->
+                        <div class="bg-gray-800 rounded-lg p-6">
+                            <h2 class="text-2xl font-semibold mb-4">
+                                Backend & Services
+                            </h2>
+                            <ul class="space-y-2" id="backend">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
+                        </div>
+
+                        <!-- Key Features -->
+                        <div class="bg-gray-800 rounded-lg p-6">
+                            <h2 class="text-2xl font-semibold mb-4">
+                                Key Features
+                            </h2>
+                            <ul class="space-y-2" id="features">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Screenshots Gallery -->
+                    <section class="mb-12">
+                        <h2 class="text-2xl font-semibold mb-6">Screenshots</h2>
+                        <div class="screenshots-container">
+                            <div id="screenshots" class="screenshots-grid">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <script src="project-data.js"></script>
+        <script src="project-details.js"></script>
+    </body>
+</html>
