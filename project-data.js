@@ -103,6 +103,12 @@ const projectsData = {
                 caption: "Advanced Meeting Controls",
             },
         ],
+        storeLinks: {
+            appStore:
+                "https://apps.apple.com/in/app/near-connect-1-0/id1666461663",
+            playStore:
+                "https://play.google.com/store/apps/details?id=com.nearplatforms.nearvideoconference&pcampaignid=web_share",
+        },
     },
     neargovernance: {
         title: "Near Governance",
@@ -159,6 +165,12 @@ const projectsData = {
                 caption: "Analytics & Reporting",
             },
         ],
+        storeLinks: {
+            appStore:
+                "https://apps.apple.com/in/app/near-governance/id6680184191",
+            playStore:
+                "https://play.google.com/store/apps/details?id=com.nearapps.governance",
+        },
     },
     nearchat: {
         title: "Near Chat",
@@ -214,6 +226,12 @@ const projectsData = {
                 caption: "Modern Chat Interface",
             },
         ],
+        storeLinks: {
+            appStore:
+                "https://apps.apple.com/in/app/near-chat-1-0/id6465993033",
+            playStore:
+                "https://play.google.com/store/apps/details?id=com.near.nearchat",
+        },
     },
     elitco: {
         title: "Elitco",
@@ -249,7 +267,7 @@ const projectsData = {
         description:
             "Alaa Fuels is a petrol pump loyalty and rewards app, designed to attract and retain customers by offering a point-based reward system. Users can upload their fuel purchase bills, earn points, and redeem them for rewards. The app provides real-time transaction tracking, seamless digital payments, and exclusive fuel discounts.",
         technologies: ["Flutter Flow"],
-        stateManagement: ["FlutterFlow’s built-in state management"],
+        stateManagement: ["FlutterFlow's built-in state management"],
         backend: ["pocketbase "],
         features: [
             "Loyalty Points System – Earn and redeem points on fuel purchases",
@@ -378,5 +396,15 @@ const projectsData = {
                 caption: "Competency Dashboard",
             },
         ],
+    },
+    pollutionreminder: {
+        title: "Pollution Reminder",
+        description:
+            "A bulk messaging system for vehicle pollution test centers to notify customers about expiring pollution certificates and due renewals.",
+        storeLinks: {
+            appStore: null, // Coming soon
+            playStore: null, // Coming soon
+        },
+        // ... other project data
     },
 };

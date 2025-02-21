@@ -18,6 +18,40 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("projectDescription").textContent =
         project.description;
 
+    // Populate store links
+    const storeLinkContainer = document.getElementById("storeLinks");
+    if (project.storeLinks) {
+        if (project.storeLinks.appStore) {
+            const appStoreLink = document.createElement("a");
+            appStoreLink.href = project.storeLinks.appStore;
+            appStoreLink.target = "_blank";
+            appStoreLink.className = "hover:opacity-80 transition-opacity";
+            appStoreLink.innerHTML = `
+                <img src="assests/logo/appstore-logo.jpeg" alt="Download on App Store" class="h-12 rounded">
+            `;
+            storeLinkContainer.appendChild(appStoreLink);
+        }
+
+        if (project.storeLinks.playStore) {
+            const playStoreLink = document.createElement("a");
+            playStoreLink.href = project.storeLinks.playStore;
+            playStoreLink.target = "_blank";
+            playStoreLink.className = "hover:opacity-80 transition-opacity";
+            playStoreLink.innerHTML = `
+                <img src="assests/logo/playstore-logo.jpeg" alt="Get it on Google Play" class="h-12 rounded">
+            `;
+            storeLinkContainer.appendChild(playStoreLink);
+        }
+
+        // If both store links are null, show "Coming Soon"
+        if (!project.storeLinks.appStore && !project.storeLinks.playStore) {
+            const comingSoon = document.createElement("div");
+            comingSoon.className = "text-gray-400 text-lg";
+            comingSoon.textContent = "App Store & Play Store links coming soon";
+            storeLinkContainer.appendChild(comingSoon);
+        }
+    }
+
     // Populate technologies
     const techList = document.getElementById("technologies");
     project.technologies.forEach((tech) => {
