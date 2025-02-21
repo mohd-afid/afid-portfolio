@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("download-resume").addEventListener("click", (e) => {
     e.preventDefault();
     // Replace with actual resume file path
-    const resumeUrl = "assests/Afid resume.pdf";
+    const resumeUrl = "assests/afid resume.pdf";
     window.open(resumeUrl, "_blank");
 });
 
