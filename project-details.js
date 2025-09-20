@@ -127,4 +127,28 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         screenshotsGrid.appendChild(div);
     });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeLightbox = document.getElementById("closeLightbox");
+
+    document.querySelectorAll(".phone-screenshot-container").forEach(item => {
+        item.addEventListener("click", event => {
+            const imageUrl = event.currentTarget.querySelector(".phone-screenshot").src;
+            lightboxImage.src = imageUrl;
+            lightbox.classList.remove("hidden");
+        });
+    });
+
+    const hideLightbox = () => {
+        lightbox.classList.add("hidden");
+    };
+
+    closeLightbox.addEventListener("click", hideLightbox);
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            hideLightbox();
+        }
+    });
 });

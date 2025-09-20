@@ -1,0 +1,15 @@
+{
+  "name": "afid-portfolio",
+  "version": "1.0.0",
+  "description": "Afid's portfolio website",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server -o",
+    "dev": "http-server -o"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

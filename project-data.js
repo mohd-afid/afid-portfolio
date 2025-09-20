@@ -407,4 +407,81 @@ const projectsData = {
         },
         // ... other project data
     },
+    sweatchi: {
+        title: "Sweatchi",
+        description:
+            "Sweatchi is a fitness and wellness mobile application designed to help users track daily activities such as steps, workouts, sleep, water intake, and nutrition. The app integrates with Apple Health and Google Fit to provide accurate health data, includes personalized workout plans, in-app subscriptions, and social features like community engagement.",
+        technologies: [
+            "Flutter",
+            "Dart",
+            "Apple HealthKit",
+            "Google Fit API",
+        ],
+        stateManagement: [
+            "Riverpod state management",
+        
+        ],
+        features: [
+            "Daily activity tracking (steps, workouts, sleep, water, nutrition)",
+            "Integration with Apple Health and Google Fit",
+            "Personalized workout plans",
+            "In-app subscriptions",
+        "Community engagement features",
+    ],
+    stateManagement: [],
+    backend: [],
+    screenshots: [
+        {
+            url: "assests/images/sweatchi/swaeatchi.png",
+                caption: "Main Dashboard",
+            },
+            {
+                url: "assests/images/sweatchi/sweatchi2.png",
+                caption: "Activity Tracking",
+            },
+            {
+                url: "assests/images/sweatchi/sweatchi3.png",
+                caption: "Workout Plans",
+            },
+            {
+                url: "assests/images/sweatchi/sweatchi4.png",
+                caption: "Nutrition Log",
+            },
+        ],
+    },
+    oceanic_tv: {
+        title: "Oceanic TV",
+        description: "Oceanic TV is a modern streaming application offering a vast library of movies, TV shows, and exclusive original content. It features a personalized user experience with smart recommendations, cross-device synchronization, and offline viewing capabilities for entertainment on the go.",
+        technologies: [
+            "Flutter",
+            "Dart",
+            "Video Player",
+            "RESTful APIs"
+        ],
+        stateManagement: [
+            "GetX"
+        ],
+        backend: [],
+        features: [
+            "Extensive content library of movies and TV shows",
+            "Personalized recommendations and user profiles",
+            "Cross-device synchronization of viewing history",
+            "Offline downloads for on-the-go viewing",
+            "Intuitive and user-friendly interface"
+        ],
+        screenshots: [
+            {
+                url: "assests/images/oceanic_tv/oceanic_tv1.png",
+                caption: "Home Screen"
+            },
+            {
+                url: "assests/images/oceanic_tv/oceanic_tv2.png",
+                caption: "Content Details"
+            },
+            {
+                url: "assests/images/oceanic_tv/oceanic_tv3.png",
+                caption: "Video Player"
+            }
+        ]
+    },
 };

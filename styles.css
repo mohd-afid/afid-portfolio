@@ -218,8 +218,7 @@ section::before {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Changed from cover to contain */
-    object-position: top; /* Align to top */
+    object-fit: cover;
     transition: transform 0.3s ease;
     background: #1a1a1a; /* Match frame background */
 }
@@ -256,4 +255,18 @@ section::before {
 
 .phone-screenshot-container:hover .screenshot-caption {
     opacity: 1;
+}
+
+/* Lightbox styles */
+.phone-screenshot-container {
+    cursor: pointer;
+}
+
+#lightbox.hidden {
+    display: none;
+}
+
+#lightboxImage {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
 }
