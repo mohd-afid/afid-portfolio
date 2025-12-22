@@ -43,8 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
             storeLinkContainer.appendChild(playStoreLink);
         }
 
-        // If both store links are null, show "Coming Soon"
-        if (!project.storeLinks.appStore && !project.storeLinks.playStore) {
+        if (project.storeLinks.liveDemo) {
+            const liveDemoLink = document.createElement("a");
+            liveDemoLink.href = project.storeLinks.liveDemo;
+            liveDemoLink.target = "_blank";
+            liveDemoLink.className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 inline-flex items-center gap-2";
+            liveDemoLink.innerHTML = `
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+                Visit Live Site
+            `;
+            storeLinkContainer.appendChild(liveDemoLink);
+        }
+
+        // If all links are null, show "Coming Soon"
+        if (!project.storeLinks.appStore && !project.storeLinks.playStore && !project.storeLinks.liveDemo) {
             const comingSoon = document.createElement("div");
             comingSoon.className = "text-gray-400 text-lg";
             comingSoon.textContent = "App Store & Play Store links coming soon";
