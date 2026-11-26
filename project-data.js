@@ -623,6 +623,236 @@ const projectsData = {
         },
     },
 
+    medilife_healthcare: {
+        title: "Medilife Healthcare",
+        cardTitle: "Medilife Healthcare",
+        tagline:
+            "Multi-site Dubai healthcare ecosystem spanning global group, home care, clinic and IV therapy.",
+        accent: 190,
+        category: "web",
+        tags: ["Next.js", "WordPress", "Tailwind", "Healthcare"],
+        description:
+            "A comprehensive multi-domain healthcare web ecosystem serving patients across Dubai and the UAE. Encompasses Medilife Global Healthcare Group's multilingual Next.js portal alongside dedicated 24/7 home healthcare, Al Warsan medical clinic, and at-home IV drip therapy platforms with rapid appointment and WhatsApp booking flows.",
+        technologies: [
+            "Next.js (App Router & i18n)",
+            "Tailwind CSS",
+            "WordPress & Elementor",
+            "Bootstrap & Custom PHP",
+            "SEO & Schema Markup",
+            "Responsive Mobile-First UI",
+        ],
+        stateManagement: [
+            "Next.js Server & Client Components",
+            "URL-based locale routing (/en, /ar)",
+        ],
+        backend: [
+            "WordPress CMS",
+            "WhatsApp Concierge & Booking Workflows",
+            "Lead & Appointment Capture Forms",
+        ],
+        features: [
+            "Multi-brand healthcare web suite across five dedicated domains",
+            "Multilingual English & Arabic support for UAE audiences",
+            "24/7 DHA-licensed home doctor, nurse, lab test and ECG booking",
+            "Dedicated IV drip therapy catalog and home-service scheduling",
+            "Al Warsan medical centre overview, team directory and care packages",
+            "One-tap WhatsApp consultation and rapid dispatch flows",
+            "Technical SEO optimization for Dubai healthcare searches",
+        ],
+        screenshots: [],
+        storeLinks: {
+            liveDemo: "https://medilifeglobal.com",
+            liveSites: [
+                { label: "medilifeglobal.com", url: "https://medilifeglobal.com" },
+                { label: "medilifehomecare.ae", url: "https://medilifehomecare.ae" },
+                { label: "medilifehomecare.com", url: "https://medilifehomecare.com" },
+                { label: "medilifeclinic.ae", url: "https://medilifeclinic.ae" },
+                { label: "ivdriphomedubai.ae", url: "https://ivdriphomedubai.ae" },
+            ],
+        },
+    },
+
+    dubai_wellness: {
+        title: "Dubai Wellness",
+        cardTitle: "Dubai Wellness",
+        tagline:
+            "Longevity & medical wellness clinic platform in JLT Dubai with 24/7 concierge booking.",
+        accent: 158,
+        category: "web",
+        tags: ["React", "Longevity", "Booking", "Healthcare"],
+        description:
+            "Digital flagship for Dubai Wellness™ by Medilife Wellness Clinic in JLT Dubai — a 24/7 science-led longevity and medical wellness destination offering biological age testing, functional medicine, hormone optimization, IV therapy, and regenerative treatments.",
+        technologies: [
+            "React",
+            "Modern Responsive CSS",
+            "Interactive Programme Showcases",
+            "SEO & Performance Optimization",
+        ],
+        stateManagement: [
+            "React Component & Hook State",
+        ],
+        backend: [
+            "Appointment & Concierge Inquiry APIs",
+            "WhatsApp Direct Booking Integration",
+        ],
+        features: [
+            "Flagship longevity programmes and Dubai Wellness Blueprint™ overview",
+            "Treatment guides for biological age testing, functional medicine and IV therapy",
+            "Personal wellness concierge and 24/7 appointment scheduling",
+            "Multilingual support and streamlined mobile inquiry flows",
+        ],
+        screenshots: [],
+        storeLinks: {
+            liveDemo: "https://dubaiwellness.ae",
+        },
+    },
+
+    dubai_std_clinic: {
+        title: "Dubai STD Clinic",
+        cardTitle: "Dubai STD Clinic",
+        tagline:
+            "Confidential STD testing and sexual health clinics in Dubai with discreet home-visit booking.",
+        accent: 208,
+        category: "web",
+        tags: ["WordPress", "Healthcare", "Booking", "SEO"],
+        description:
+            "Dual-domain web presence for confidential STD testing and sexual health care in Dubai, enabling patients to schedule discreet at-home sample collection or private clinic consultations with fast, accurate lab results.",
+        technologies: [
+            "WordPress & Elementor",
+            "Custom PHP Templates",
+            "Technical & Local SEO",
+            "Mobile-Optimized UI",
+        ],
+        stateManagement: [
+            "Server-rendered CMS pages",
+        ],
+        backend: [
+            "WordPress CMS",
+            "Private Appointment & Callback Forms",
+            "WhatsApp Consultation Routing",
+        ],
+        features: [
+            "Discreet, privacy-first patient journey across two dedicated domains",
+            "At-home and in-clinic STD testing packages with clear turnaround times",
+            "Doctor consultation scheduling and fast confidential booking",
+            "Search-optimized landing pages for sexual health services in Dubai",
+        ],
+        screenshots: [],
+        storeLinks: {
+            liveDemo: "https://stdclinicindubai.com",
+            liveSites: [
+                { label: "stdclinicindubai.com", url: "https://stdclinicindubai.com" },
+                { label: "dubaistdclinic.ae", url: "https://dubaistdclinic.ae" },
+            ],
+        },
+    },
+
+    simans_delivery: {
+        title: "Simans Delivery Services",
+        cardTitle: "Simans Delivery",
+        tagline:
+            "Courier and logistics platform serving businesses and individuals across Qatar.",
+        accent: 28,
+        category: "web",
+        tags: ["Next.js", "Logistics", "Multilingual", "Responsive"],
+        description:
+            "Corporate and service web platform for Simans Delivery Services in Qatar, showcasing reliable courier, same-day delivery, and enterprise logistics solutions tailored across industry sectors.",
+        technologies: [
+            "Next.js",
+            "React",
+            "Responsive Modern UI",
+            "SEO Metadata & Structured Pages",
+        ],
+        stateManagement: [
+            "Next.js App Router & React Hooks",
+        ],
+        backend: [
+            "Next.js Server Rendering",
+            "Inquiry & Recruitment Form Handling",
+            "WhatsApp Business Integration",
+        ],
+        features: [
+            "Service catalog covering courier, last-mile and enterprise logistics in Qatar",
+            "Industry sector solutions and nationwide coverage breakdown",
+            "Partner showcase, careers portal and instant quote/contact flows",
+            "Fast Next.js page loads with mobile-friendly navigation",
+        ],
+        screenshots: [],
+        storeLinks: {
+            liveDemo: "https://simansdelivery.qa",
+        },
+    },
+
+    daniels_delivery: {
+        title: "Daniels Delivery Services",
+        cardTitle: "Daniels Delivery",
+        tagline:
+            "Courier and last-mile logistics web platform built with Next.js.",
+        accent: 236,
+        category: "web",
+        tags: ["Next.js", "Logistics", "Multilingual", "Responsive"],
+        description:
+            "Web platform for Daniels Delivery Services highlighting dependable courier and logistics operations across Qatar, complete with service overviews, industry verticals, and direct client onboarding.",
+        technologies: [
+            "Next.js",
+            "React",
+            "Responsive Layout System",
+            "SEO Optimization",
+        ],
+        stateManagement: [
+            "Next.js Server & Client Components",
+        ],
+        backend: [
+            "Next.js API & Form Handling",
+            "WhatsApp Direct Inquiry Integration",
+        ],
+        features: [
+            "Clear presentation of courier, parcel and fleet delivery capabilities",
+            "Dedicated sections for Qatar coverage, industries served and careers",
+            "Fast, responsive Next.js experience across desktop and mobile",
+            "Direct WhatsApp and contact workflows for shipment inquiries",
+        ],
+        screenshots: [],
+        storeLinks: {
+            liveDemo: "https://danielsdelivery.in",
+        },
+    },
+
+    belgium_solutions: {
+        title: "Belgium Solutions",
+        cardTitle: "Belgium Solutions",
+        tagline:
+            "Supply chain web platform for Belgium Oil Solutions integrating end-to-end operations.",
+        accent: 42,
+        category: "web",
+        tags: ["Next.js", "Supply Chain", "Enterprise", "Vercel"],
+        description:
+            "Modern web platform for Belgium Oil Solutions (BOS), presenting an integrated end-to-end supply chain solution that connects every link across procurement, logistics, and delivery.",
+        technologies: [
+            "Next.js",
+            "React",
+            "Vercel Deployment",
+            "Responsive UI",
+        ],
+        stateManagement: [
+            "Next.js App Router & React State",
+        ],
+        backend: [
+            "Next.js Server Rendering",
+            "Contact & Inquiry Integration",
+        ],
+        features: [
+            "End-to-end supply chain capability showcase for Belgium Oil Solutions",
+            "Clean corporate interface optimized for B2B partners and clients",
+            "High-performance Next.js delivery hosted on Vercel",
+            "Responsive layout across desktop, tablet and mobile devices",
+        ],
+        screenshots: [],
+        storeLinks: {
+            liveDemo: "https://belgium-solutions.vercel.app",
+        },
+    },
+
     trackify: {
         title: "Trackify",
         cardTitle: "Trackify",

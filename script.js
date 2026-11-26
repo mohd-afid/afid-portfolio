@@ -110,7 +110,9 @@
     );
 
     function observeReveals(root = document) {
-        $$(".reveal", root).forEach((el) => revealObserver.observe(el));
+        $$(".reveal:not(.is-in)", root).forEach((el) =>
+            revealObserver.observe(el)
+        );
     }
     observeReveals();
 
@@ -259,9 +261,16 @@
             out.push(
                 `<a class="store-dot" href="${links.appStore}" target="_blank" rel="noopener" title="App Store" aria-label="View on the App Store">${ICONS.appStore}</a>`
             );
-        if (links.liveDemo)
+        const liveUrl =
+            links.liveDemo ||
+            (Array.isArray(links.liveSites) &&
+                links.liveSites[0] &&
+                links.liveSites[0].url);
+        if (liveUrl)
             out.push(
-                `<a class="store-dot" href="${links.liveDemo}" target="_blank" rel="noopener" title="Live site" aria-label="Open the live site">${ICONS.link}</a>`
+                `<a class="store-dot" href="${escapeHtml(
+                    liveUrl
+                )}" target="_blank" rel="noopener" title="Live site" aria-label="Open the live site">${ICONS.link}</a>`
             );
         return out.length ? `<div class="card__badges">${out.join("")}</div>` : "";
     }
@@ -300,11 +309,66 @@
     }
 
     if (grid && typeof projectsData !== "undefined") {
+        const INITIAL_VISIBLE = 6;
         const entries = Object.entries(projectsData);
+        const actionsBar = $("#projectsActions");
+        const toggleBtn = $("#toggleProjects");
+        let currentFilter = "all";
+        let showAll = false;
 
         grid.innerHTML = entries
             .map(([id, p], i) => cardMarkup(id, p, i))
             .join("");
+
+        function applyProjectVisibility() {
+            let matched = 0;
+
+            $$(".card", grid).forEach((card) => {
+                const matches =
+                    currentFilter === "all" ||
+                    card.dataset.category === currentFilter;
+                if (!matches) {
+                    card.classList.add("is-hidden");
+                    return;
+                }
+                matched += 1;
+                const show = showAll || matched <= INITIAL_VISIBLE;
+                card.classList.toggle("is-hidden", !show);
+            });
+
+            if (actionsBar && toggleBtn) {
+                const hasMore = matched > INITIAL_VISIBLE;
+                actionsBar.hidden = !hasMore;
+                if (hasMore) {
+                    const remaining = matched - INITIAL_VISIBLE;
+                    toggleBtn.setAttribute("aria-expanded", String(showAll));
+                    toggleBtn.innerHTML = showAll
+                        ? `Show less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>`
+                        : `Show more (${remaining} more) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`;
+                }
+            }
+
+            observeReveals(grid);
+            if (actionsBar && !actionsBar.hidden) {
+                revealObserver.observe(actionsBar);
+            }
+        }
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener("click", () => {
+                showAll = !showAll;
+                applyProjectVisibility();
+                if (!showAll) {
+                    const section = $("#projects");
+                    if (section && section.getBoundingClientRect().top < 0) {
+                        section.scrollIntoView({
+                            behavior: reduceMotion ? "auto" : "smooth",
+                            block: "start",
+                        });
+                    }
+                }
+            });
+        }
 
         // Filters, with live counts, hiding any category that has no projects.
         if (filterBar && typeof projectCategories !== "undefined") {
@@ -332,11 +396,9 @@
                     f.classList.toggle("is-active", f === btn)
                 );
 
-                const want = btn.dataset.filter;
-                $$(".card", grid).forEach((card) => {
-                    const show = want === "all" || card.dataset.category === want;
-                    card.classList.toggle("is-hidden", !show);
-                });
+                currentFilter = btn.dataset.filter;
+                showAll = false;
+                applyProjectVisibility();
             });
         }
 
@@ -351,7 +413,7 @@
             });
         }
 
-        observeReveals(grid);
+        applyProjectVisibility();
     }
 
     /* ---------------------------------------------------------------- resume */

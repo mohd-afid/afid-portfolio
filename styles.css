@@ -942,6 +942,16 @@ p {
     gap: clamp(1.25rem, 2.6vw, 1.85rem);
 }
 
+.projects__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: clamp(2rem, 4vw, 2.75rem);
+}
+
+.projects__actions[hidden] {
+    display: none;
+}
+
 .card {
     position: relative;
     display: flex;

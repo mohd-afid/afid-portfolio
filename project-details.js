@@ -71,22 +71,40 @@
     const linkDefs = [
         { key: "playStore", small: "Get it on", big: "Google Play" },
         { key: "appStore", small: "Download on the", big: "App Store" },
-        { key: "liveDemo", small: "Open the", big: "Live site" },
     ];
 
-    const linkHtml = linkDefs
+    const storeButtons = linkDefs
         .filter((d) => links[d.key])
         .map(
             (d) => `
-            <a class="store-btn" href="${links[d.key]}" target="_blank" rel="noopener">
+            <a class="store-btn" href="${escapeHtml(links[d.key])}" target="_blank" rel="noopener">
                 ${STORE_ICONS[d.key]}
                 <span>
                     <span class="small">${d.small}</span>
                     <span class="big">${d.big}</span>
                 </span>
             </a>`
-        )
-        .join("");
+        );
+
+    const liveSites =
+        Array.isArray(links.liveSites) && links.liveSites.length
+            ? links.liveSites
+            : links.liveDemo
+            ? [{ label: "Live site", url: links.liveDemo }]
+            : [];
+
+    const liveButtons = liveSites.map(
+        (site) => `
+            <a class="store-btn" href="${escapeHtml(site.url)}" target="_blank" rel="noopener">
+                ${STORE_ICONS.liveDemo}
+                <span>
+                    <span class="small">${liveSites.length > 1 ? "Live site" : "Open the"}</span>
+                    <span class="big">${escapeHtml(site.label || "Live site")}</span>
+                </span>
+            </a>`
+    );
+
+    const linkHtml = storeButtons.concat(liveButtons).join("");
 
     linkBox.innerHTML =
         linkHtml ||
